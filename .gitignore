@@ -1,0 +1,13 @@
+/target
+/.idea
+result
+
+*.sst
+*.log
+CURRENT
+IDENTITY
+LOCK
+LOG
+LOG.old.*
+MANIFEST-*
+OPTIONS-*

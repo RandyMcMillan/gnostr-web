@@ -1,0 +1,109 @@
+@import 'colours';
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  @media (prefers-color-scheme: dark) {
+    color: darken($darkModeHighlightColour, 20%);
+  }
+
+  border-collapse: collapse;
+
+  th, td {
+    white-space: nowrap;
+    padding-right: 10px;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  th {
+    text-align: left;
+  }
+}
+
+table.repositories {
+  width: 100%;
+
+  a {
+    color: black;
+
+    @media (prefers-color-scheme: dark) {
+      color: darken($darkModeHighlightColour, 15%);
+    }
+
+    &:hover {
+      color: #00f;
+
+      @media (prefers-color-scheme: dark) {
+        color: darken($darkModeHighlightColour, 15%);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      height: 1.3rem;
+      vertical-align: middle;
+
+      &:nth-child(odd) {
+        background: #f7f7f7;
+
+        @media (prefers-color-scheme: dark) {
+          background: #111;
+        }
+      }
+
+      &:nth-child(even) {
+        background: #e1e1e1;
+
+        @media (prefers-color-scheme: dark) {
+          background: none;
+        }
+      }
+
+      &.no-background {
+        background: none;
+      }
+
+      &.has-parent td:first-of-type {
+        padding-left: 1rem;
+      }
+
+      td.repo-section {
+        font-style: italic;
+        color: #888;
+      }
+
+      &.separator {
+        background: none !important;
+        height: 1rem;
+      }
+    }
+
+    pre {
+      margin: 0;
+    }
+  }
+
+  .nested-tree {
+    color: blue !important;
+    font-weight: bold;
+
+    @media (prefers-color-scheme: dark) {
+      color: $darkModeTextColour !important;
+    }
+  }
+}
+
+table.commit-info {
+  td, th {
+    padding: 0.1em 1em 0.1em 0.1em;
+  }
+}
