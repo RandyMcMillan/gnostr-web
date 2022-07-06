@@ -1,0 +1,87 @@
+[package]
+name = "rgit"
+description = "A gitweb/cgit-like interface"
+version = "0.1.3"
+edition = "2021"
+authors = ["Jordan Doyle <jordan@doyle.la>"]
+license = "WTFPL"
+
+[workspace]
+members = ["tree-sitter-grammar-repository"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0"
+arc-swap = "1.7"
+askama = { version = "0.12.0", default-features = false }
+axum = { version = "0.7", default-features = false, features = [
+  "query",
+  "tokio",
+  "http1",
+] }
+bytes = "1.5"
+clap = { version = "4.5.20", default-features = false, features = [
+  "std",
+  "cargo",
+  "derive",
+  "help",
+  "usage",
+] }
+comrak = { version = "0.28.0", default-features = false }
+const-hex = "1.12"
+const_format = "0.2"
+flate2 = "1.0"
+futures-util = "0.3"
+gix = { version = "0.66", default-features = false, features = [
+  "fast-sha1",
+  "tracing",
+  "parallel",
+  "blob-diff",
+  "revision",
+] }
+httparse = "1.7"
+humantime = "2.1"
+itertools = "0.13.0"
+kanal = "0.1.0-pre8"
+md5 = "0.7"
+moka = { version = "0.12.0", features = ["future"] }
+path-clean = "1.0.1"
+rand = "0.8.5"
+rkyv = "0.8"
+rocksdb = { version = "0.22", default-features = false, features = ["snappy"] }
+rust-ini = "0.21.1"
+serde = { version = "1.0", features = ["derive", "rc"] }
+simdutf8 = "0.1.5"
+tar = { version = "0.4", default-features = false }
+time = { version = "0.3", features = ["serde", "formatting"] }
+timeago = { version = "0.4.2", default-features = false }
+tokio = { version = "1.19", features = ["full", "tracing"] }
+tokio-stream = "0.1"
+tokio-util = { version = "0.7.10", features = ["io"] }
+toml = { version = "0.8", default-features = false, features = ["parse"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors", "timeout"] }
+tower-layer = "0.3"
+tower-service = "0.3"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", default-features = false, features = [
+  "env-filter",
+  "smallvec",
+  "parking_lot",
+  "fmt",
+] }
+tree-sitter-grammar-repository = { path = "./tree-sitter-grammar-repository" }
+tree-sitter-highlight = "0.23"
+unix_mode = "0.1"
+uuid = { version = "1.7", features = ["v4"] }
+v_htmlescape = { version = "0.15", features = ["bytes-buf"] }
+xxhash-rust = { version = "0.8.12", features = ["const_xxh3"] }
+yoke = { version = "0.7.1", features = ["derive"] }
+
+[build-dependencies]
+anyhow = "1.0"
+rsass = "0.28.0"
+
+[package.metadata.deb]
+section = "web"
