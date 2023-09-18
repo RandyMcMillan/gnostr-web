@@ -15,10 +15,10 @@ const defaultRelays = [
 const ndk = new NDK({ explicitRelayUrls: defaultRelays, signer: nip07signer });
 await ndk.connect();
 
-var page = fs.readFileSync('./demo/index.html', 'utf8')
-var js = fs.readFileSync('./demo/app.js', 'utf8')
-var css = fs.readFileSync('./demo/app.css', 'utf8')
-var image = fs.readFileSync('./demo/ostriches.jpeg', 'utf8')
+var page = fs.readFileSync('./public/index.html', 'utf8')
+var js = fs.readFileSync('./public/app.js', 'utf8')
+var css = fs.readFileSync('./public/app.css', 'utf8')
+var image = fs.readFileSync('./public/ostriches.jpeg', 'utf8')
 
 console.log(page)
 console.log(js)

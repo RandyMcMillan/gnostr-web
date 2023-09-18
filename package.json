@@ -1,9 +1,19 @@
+
 {
   "name": "amethyst-web-server",
   "version": "0.0.1",
   "description": "Amethyst's Web Server",
   "main": "index.mjs",
+  "_comment": "https://docs.npmjs.com/cli/v10/using-npm/scripts",
   "scripts": {
+    "start": "$(which node) .",
+    "install-all": "npm run install-gnostr-cat && npm run install-jq && npm run install-curl && npm run install-python3 && npm run install-cargo",
+    "install-cargo": "type -P cargo || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -s -- -y --no-modify-path --default-toolchain stable --profile default & . $HOME/.cargo/env",
+    "install-gnostr-cat": "$(which cargo || npm run install-cargo) install gnostr-cat",
+    "install-jq": "type -P jq || $(which apt-get || which brew) install jq",
+    "install-curl": "type -P curl || $(which apt-get >/tmp/gnostr-web.log || which brew) install curl",
+    "install-python3": "type -P python3 || $(which apt-get || which brew) install python3",
+    "gnostr-query": "$(which python3) <($(which curl) https://raw.githubusercontent.com/gnostr-org/gnostr/master/template/gnostr-query) -i 4885034c358f0f3e57bfa3018685801e49d4a384c828c6ad0f384fbacd19d941 | $(which gnostr-cat) -u ws://127.0.0.1:6102 | $(which jq)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vitor Pamplona",
