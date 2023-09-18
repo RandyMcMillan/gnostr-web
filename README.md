@@ -1,4 +1,4 @@
-# [gnostr-proxy](https://github.com/gnostr-org/gnostr-proxy)/[public](https://github.com/gnostr-org/gnostr-web.git)
+# [gnostr-web](https://github.com/gnostr-org/gnostr-web)
 
 A Proof of Concept webserver that loads HTML, JavaScript, Media and CSS from Nostr relays and display as a website
 
@@ -19,14 +19,10 @@ I deployed the [demo](demo/index.html) website inside Nostr on the following eve
 ```
 
 ```
-gnostr-query -i \
-7ccda059f9f4b7ddfe8e39aa4f3a41f2c262bfee9203b5894eff36a8f9499a05 | \
-gnostr-cat -u \
-ws://localhost:6102 | \
-jq .[2].content
+gnostr-query -i 7ccda059f9f4b7ddfe8e39aa4f3a41f2c262bfee9203b5894eff36a8f9499a05 |  gnostr-cat -u ws://localhost:6102 | jq .[] | jq .content
 ```
 
-## The Picture as Kind 1065/1064
+## The Picture as Kind 1065/1964
 
 ```json
 {
@@ -48,20 +44,12 @@ jq .[2].content
 ```
 
 ```
-gnostr-query -i \
-3c55892674bd88431fd0d9b611e96e65c91802a128596bf3bcd6ca6c4aa2d5c7 | \
-gnostr-cat -u \
-ws://localhost:6102 | \
-jq
+gnostr-query -i 3c55892674bd88431fd0d9b611e96e65c91802a128596bf3bcd6ca6c4aa2d5c7 |  gnostr-cat -u ws://localhost:6102 | jq 
 
 ```
 
 ```
-gnostr-query -i \
-3c55892674bd88431fd0d9b611e96e65c91802a128596bf3bcd6ca6c4aa2d5c7 | \
-gnostr-cat -u \
-ws://localhost:6102 | \
-jq .[2].content
+gnostr-query -i 3c55892674bd88431fd0d9b611e96e65c91802a128596bf3bcd6ca6c4aa2d5c7 |  gnostr-cat -u ws://localhost:6102 | jq .[] | jq .content
 ```
 
 ## The JS JavaScript as kind 5394
@@ -79,12 +67,7 @@ jq .[2].content
 ```
 
 ```
-gnostr-query -i \
-4885034c358f0f3e57bfa3018685801e49d4a384c828c6ad0f384fbacd19d941 | \
-gnostr-cat -u \
-ws://localhost:6102 | \
-jq .[] | \
-jq .content
+gnostr-query -i 4885034c358f0f3e57bfa3018685801e49d4a384c828c6ad0f384fbacd19d941 |  gnostr-cat -u ws://localhost:6102 | jq .[] | jq .content
 ```
 
 
@@ -103,51 +86,15 @@ jq .content
 ```
 
 ```
-gnostr-query -i \
-1efc13c6ffbaf60c0347baf89f6ecaad22f74abf82165fcdb55ef7e8cca8a597 | \
-gnostr-cat -u \
-ws://localhost:6102 | \
-jq .[2].content
+gnostr-query -i 1efc13c6ffbaf60c0347baf89f6ecaad22f74abf82165fcdb55ef7e8cca8a597 |  gnostr-cat -u ws://localhost:6102 | jq .[] | jq .content
 ```
-
 ```
-gnostr-query -i \
-1efc13c6ffbaf60c0347baf89f6ecaad22f74abf82165fcdb55ef7e8cca8a597 | \
-gnostr-cat -u \
-ws://localhost:6102 | \
-jq .[2].content | \
-sed 's/\"//' | \
-rev | \
-sed 's/\"//' | \
-rev
+gnostr-query -i 1efc13c6ffbaf60c0347baf89f6ecaad22f74abf82165fcdb55ef7e8cca8a597 | gnostr-cat -u ws://127.0.0.1:6102
 ```
 
 
 ```
-gnostr-query -i \
-1efc13c6ffbaf60c0347baf89f6ecaad22f74abf82165fcdb55ef7e8cca8a597 | \
-gnostr-cat -u \
-ws://localhost:6102 | \
-jq .[2].content | \
-sed 's/\"//' | \
-rev | \
-sed 's/\"//' | \
-rev | \
-sed 's/<!DOCTYPE html>//' | \
-pandoc -o index.html
-```
-
-
-```
-gnostr-query -i \
-3c55892674bd88431fd0d9b611e96e65c91802a128596bf3bcd6ca6c4aa2d5c7 | \
-gnostr-cat -u \
-ws://127.0.0.1:6102 | \
-jq .[2].tags | \
-jq .[5] | \
-jq .[1] | \
-tr -d "\"" | \
-base64
+gnostr-query -i 3c55892674bd88431fd0d9b611e96e65c91802a128596bf3bcd6ca6c4aa2d5c7 | gnostr-cat -u ws://127.0.0.1:6102 | jq .[2].tags | jq .[5] | jq .[1] | tr -d "\"" | base64  
 ```
 
 # Deployment Overview
