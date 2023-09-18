@@ -47,14 +47,14 @@ app.get('/e/:idHex', async (req, res) => {
         } else if (event.kind == 5394) {
             res.setHeader('content-type', "text/javascript")
             res.send(event.content)
-        } 
+        }
     } else {
         res.send("Event Not Found")
     }
 })
 
 app.listen(port, () => {
-    console.log("Listening to port" + port)
+    console.log("Listening to port:" + port)
 })
 
 var myTimeout = null
