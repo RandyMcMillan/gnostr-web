@@ -10,6 +10,7 @@
     "install-all": "npm run install-gnostr-cat && npm run install-jq && npm run install-curl && npm run install-python3 && npm run install-cargo",
     "install-cargo": "type -P cargo || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -s -- -y --no-modify-path --default-toolchain stable --profile default & . $HOME/.cargo/env",
     "install-gnostr-cat": "$(which cargo || npm run install-cargo) install gnostr-cat",
+    "install-gnostr-bins": "$(which cargo || npm run install-cargo) install gnostr-bins",
     "install-jq": "type -P jq || $(which apt-get || which brew) install jq",
     "install-curl": "type -P curl || $(which apt-get >/tmp/gnostr-web.log || which brew) install curl",
     "install-python3": "type -P python3 || $(which apt-get || which brew) install python3",
