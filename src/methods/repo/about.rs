@@ -28,7 +28,6 @@ pub struct View {
     branch: Option<Arc<str>>,
 }
 
-//handle open_repo
 pub async fn handle(
     Extension(repo): Extension<Repository>,
     Extension(RepositoryPath(repository_path)): Extension<RepositoryPath>,
