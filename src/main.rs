@@ -138,7 +138,7 @@ async fn main() -> Result<(), anyhow::Error> {
         run_indexer(db.clone(), args.scan_path.clone(), args.refresh_interval);
 
     let css = {
-        let theme = toml::from_str::<Theme>(include_str!("../themes/solarized_light.toml"))
+        let theme = toml::from_str::<Theme>(include_str!("../themes/github_light.toml"))
             .unwrap()
             .build_css();
         let css = Box::leak(
@@ -151,7 +151,7 @@ async fn main() -> Result<(), anyhow::Error> {
     };
 
     let dark_css = {
-        let theme = toml::from_str::<Theme>(include_str!("../themes/solarized_dark.toml"))
+        let theme = toml::from_str::<Theme>(include_str!("../themes/onedark.toml"))
             .unwrap()
             .build_css();
         let css = Box::leak(
