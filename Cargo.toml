@@ -1,9 +1,9 @@
 [package]
-name = "rgit"
-description = "A gitweb/cgit-like interface"
-version = "0.1.3"
+name = "gnit"
+description = "gnostr:git server"
+version = "0.0.1"
 edition = "2021"
-authors = ["Jordan Doyle <jordan@doyle.la>"]
+authors = ["gnostr <admin@gnostr.org>", "Jordan Doyle <jordan@doyle.la>"]
 license = "WTFPL"
 
 [workspace]
