@@ -2028,6 +2028,59 @@ dependencies = [
 ]
 
 [[package]]
+name = "gnit"
+version = "0.0.1"
+dependencies = [
+ "anyhow",
+ "arc-swap",
+ "askama",
+ "axum",
+ "bytes",
+ "clap",
+ "comrak 0.28.0",
+ "const-hex",
+ "const_format",
+ "eejit 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "flate2",
+ "futures-util",
+ "gix",
+ "httparse",
+ "humantime",
+ "itertools 0.13.0",
+ "kanal",
+ "md5",
+ "moka",
+ "path-clean",
+ "rand 0.8.5",
+ "rkyv",
+ "rocksdb",
+ "rsass",
+ "rust-ini",
+ "serde",
+ "simdutf8",
+ "tar",
+ "time",
+ "timeago",
+ "tokio",
+ "tokio-stream",
+ "tokio-util",
+ "toml 0.8.19",
+ "tower",
+ "tower-http",
+ "tower-layer",
+ "tower-service",
+ "tracing",
+ "tracing-subscriber",
+ "tree-sitter-grammar-repository",
+ "tree-sitter-highlight",
+ "unix_mode",
+ "uuid",
+ "v_htmlescape",
+ "xxhash-rust",
+ "yoke",
+]
+
+[[package]]
 name = "hashbrown"
 version = "0.14.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3245,59 +3298,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a31c1f1959e4db12c985c0283656be0925f1539549db1e47c4bd0b8b599e1ef7"
 dependencies = [
  "bytecheck",
-]
-
-[[package]]
-name = "rgit"
-version = "0.1.3"
-dependencies = [
- "anyhow",
- "arc-swap",
- "askama",
- "axum",
- "bytes",
- "clap",
- "comrak 0.28.0",
- "const-hex",
- "const_format",
- "eejit 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "flate2",
- "futures-util",
- "gix",
- "httparse",
- "humantime",
- "itertools 0.13.0",
- "kanal",
- "md5",
- "moka",
- "path-clean",
- "rand 0.8.5",
- "rkyv",
- "rocksdb",
- "rsass",
- "rust-ini",
- "serde",
- "simdutf8",
- "tar",
- "time",
- "timeago",
- "tokio",
- "tokio-stream",
- "tokio-util",
- "toml 0.8.19",
- "tower",
- "tower-http",
- "tower-layer",
- "tower-service",
- "tracing",
- "tracing-subscriber",
- "tree-sitter-grammar-repository",
- "tree-sitter-highlight",
- "unix_mode",
- "uuid",
- "v_htmlescape",
- "xxhash-rust",
- "yoke",
 ]
 
 [[package]]
