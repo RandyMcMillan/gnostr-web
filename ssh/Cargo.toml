@@ -11,7 +11,7 @@
 
 [package]
 edition = "2021"
-name = "eejit"
+name = "gnit-ssh"
 version = "0.2.1"
 description = "A self-hosted Git server that's easy to set up, use, and maintain."
 homepage = "https://eejit.moh.ink"
