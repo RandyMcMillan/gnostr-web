@@ -1032,30 +1032,6 @@ dependencies = [
 [[package]]
 name = "eejit"
 version = "0.2.1"
-dependencies = [
- "anyhow",
- "async-trait",
- "clean-path",
- "colored",
- "comrak 0.18.0",
- "env_logger",
- "futures",
- "log",
- "russh",
- "russh-keys",
- "sd-notify",
- "serde",
- "shellwords",
- "tempfile",
- "tera",
- "textwrap",
- "tokio",
- "toml 0.7.8",
-]
-
-[[package]]
-name = "eejit"
-version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6a7b509ba0e7c69753e7f5c92df37063506e70480956c0854dbcbb928c805f3b"
 dependencies = [
@@ -2040,7 +2016,7 @@ dependencies = [
  "comrak 0.28.0",
  "const-hex",
  "const_format",
- "eejit 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "eejit",
  "flate2",
  "futures-util",
  "gix",
@@ -2078,6 +2054,30 @@ dependencies = [
  "v_htmlescape",
  "xxhash-rust",
  "yoke",
+]
+
+[[package]]
+name = "gnit-ssh"
+version = "0.2.1"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "clean-path",
+ "colored",
+ "comrak 0.18.0",
+ "env_logger",
+ "futures",
+ "log",
+ "russh",
+ "russh-keys",
+ "sd-notify",
+ "serde",
+ "shellwords",
+ "tempfile",
+ "tera",
+ "textwrap",
+ "tokio",
+ "toml 0.7.8",
 ]
 
 [[package]]

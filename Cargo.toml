@@ -7,7 +7,7 @@ authors = ["gnostr <admin@gnostr.org>", "Jordan Doyle <jordan@doyle.la>"]
 license = "WTFPL"
 
 [workspace]
-members = ["tree-sitter-grammar-repository", "web"]
+members = ["tree-sitter-grammar-repository", "ssh"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
