@@ -1,0 +1,3 @@
+name = "gnostr/repo.git"
+public = false
+members = ["gnostr"]
