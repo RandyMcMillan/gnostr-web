@@ -6,13 +6,20 @@
 
 @media (prefers-color-scheme: dark) {
   html {
-    background: #000;
-    color: $darkModeTextColour;
+    background: $base03;
+    color: $base3;
   }
 
   h2, h3 {
-    color: darken($darkModeHighlightColour, 20%);
+    color: darken($base3, 30%);
   }
+}
+
+a:any-link {
+color: $blue
+}
+a:any-link:active {
+color: $blue
 }
 
 body {
@@ -22,12 +29,12 @@ body {
 }
 
 header {
-  border-bottom: solid 1px #ccc;
+  border-bottom: solid 1px $base2;
 }
 
 nav {
   margin-top: 2rem;
-  border-bottom: solid 3px #ccc;
+  border-bottom: solid 3px $base3;
   display: flex;
 
   .grow {
@@ -35,76 +42,25 @@ nav {
   }
 
   @media (prefers-color-scheme: dark) {
-    border-bottom-color: $darkModeHighlightColour;
+    border-bottom-color: $base3;
   }
 
   a {
     padding: 2px 0.75em;
-    color: #777;
+    color: $base1;
     font-size: 110%;
 
     @media (prefers-color-scheme: dark) {
-      color: $darkModeHighlightColour;
+      color: $base2;
     }
 
     &.active {
-      color: #000;
-      background-color: #ccc;
+      color: $base1;
+      background-color: $base03;
 
       @media (prefers-color-scheme: dark) {
-        background: $darkModeHighlightColour;
+        background: $base03;
       }
     }
-  }
-}
-
-aside {
-  background: #f7f7f7;
-  padding: 0.3rem 2rem;
-
-  @media (prefers-color-scheme: dark) {
-    background: #111;
-  }
-}
-
-main {
-  padding: 2rem;
-  margin: 0;
-  border-bottom: solid 3px #ccc;
-
-  @media (prefers-color-scheme: dark) {
-    border-bottom-color: $darkModeHighlightColour;
-  }
-}
-
-footer {
-  margin-top: 0.5em;
-  text-align: center;
-  font-size: 80%;
-  color: #ccc;
-
-  @media (prefers-color-scheme: dark) {
-    color: $darkModeTextColour;
-  }
-}
-
-a {
-  text-decoration: none;
-  color: blue;
-
-  @media (prefers-color-scheme: dark) {
-    color: darken($darkModeHighlightColour, 10%);
-  }
-
-  &.no-style {
-    color: inherit;
-
-    @media (prefers-color-scheme: dark) {
-      color: darken($darkModeHighlightColour, 10%);
-    }
-  }
-
-  &:hover {
-    text-decoration: underline;
   }
 }

@@ -1,5 +1,4 @@
 @import 'colours';
-
 .table-responsive {
   display: block;
   width: 100%;
@@ -8,7 +7,7 @@
 
 table {
   @media (prefers-color-scheme: dark) {
-    color: darken($darkModeHighlightColour, 20%);
+    color: darken($base0, 0%);
   }
 
   border-collapse: collapse;
@@ -31,17 +30,17 @@ table.repositories {
   width: 100%;
 
   a {
-    color: black;
+    color: $base2;
 
     @media (prefers-color-scheme: dark) {
-      color: darken($darkModeHighlightColour, 15%);
+      color: darken($base2, 15%);
     }
 
     &:hover {
-      color: #00f;
+      color: $base3;
 
       @media (prefers-color-scheme: dark) {
-        color: darken($darkModeHighlightColour, 15%);
+        color: darken($base3, 15%);
         text-decoration: underline;
       }
     }
@@ -49,27 +48,32 @@ table.repositories {
 
   tbody {
     tr {
+      color: $base1;
       height: 1.3rem;
       vertical-align: middle;
 
       &:nth-child(odd) {
-        background: #f7f7f7;
+        background: $base03;
 
         @media (prefers-color-scheme: dark) {
-          background: #111;
+          background: $base03;
         }
       }
 
       &:nth-child(even) {
-        background: #e1e1e1;
+        background: $base02;
 
         @media (prefers-color-scheme: dark) {
-          background: none;
+          background: $base02;
         }
       }
 
       &.no-background {
-        background: none;
+        background: $base3;
+
+        @media (prefers-color-scheme: dark) {
+          background: $base03;
+        }
       }
 
       &.has-parent td:first-of-type {
@@ -78,7 +82,7 @@ table.repositories {
 
       td.repo-section {
         font-style: italic;
-        color: #888;
+        color: $blue;
       }
 
       &.separator {
@@ -87,22 +91,35 @@ table.repositories {
       }
     }
 
+    //commit hashes
+    th {
+      margin: 0;
+      color: $base1;
+    }
+    //commit hashes
+    td {
+      margin: 0;
+      color: $base1;
+    }
+    //commit hashes
     pre {
       margin: 0;
+      color: $base1;
     }
   }
 
   .nested-tree {
-    color: blue !important;
+    color: $blue !important;
     font-weight: bold;
 
     @media (prefers-color-scheme: dark) {
-      color: $darkModeTextColour !important;
+      color: $blue !important;
     }
   }
 }
 
 table.commit-info {
+  color: $base1;
   td, th {
     padding: 0.1em 1em 0.1em 0.1em;
   }
