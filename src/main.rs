@@ -72,14 +72,16 @@ pub struct Args {
     /// Path to a directory in which the `RocksDB` database should be stored, will be created if it doesn't already exist
     ///
     /// The `RocksDB` database is very quick to generate, so this can be pointed to temporary storage
-    #[clap(short, long, value_parser)]
+    #[clap(short, long, value_parser, default_value = ".gnostr/gnit/web")]
     db_store: PathBuf,
     /// The socket address to bind to (eg. 0.0.0.0:3333)
+    #[clap(short, long, value_parser, default_value = "0.0.0.0:3333")]
     bind_address: SocketAddr,
     /// The path in which your bare Git repositories reside (will be scanned recursively)
+    #[clap(short, long, value_parser, default_value = ".")]
     scan_path: PathBuf,
     /// Configures the metadata refresh interval (eg. "never" or "60s")
-    #[clap(long, default_value_t = RefreshInterval::Duration(Duration::from_secs(300)))]
+    #[clap(long, default_value_t = RefreshInterval::Duration(Duration::from_secs(30)))]
     refresh_interval: RefreshInterval,
     /// Configures the request timeout.
     #[clap(long, default_value_t = Duration::from_secs(10).into())]
